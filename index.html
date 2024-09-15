@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Provador Virtual</title>
+
+    <!-- styles -->
     <link rel="stylesheet" href="./style/global.css">
+
+    <!-- face api -->
+    <!-- <script defer src="https://cdn.jsdelivr.net/npm/face-api.js"></script> -->
+     <script src="./scripts/face-api.min.js"></script>
+
+    <!-- scripts -->
+     <script defer src="./scripts/main.js"></script>
 </head>
 <body>
-    
+    <main>
+
+        <div class="video">
+            <video id="video" width="720" height="560" autoplay muted></video>
+            <canvas id="overlay"></canvas>
+        </div>
+    </main>
 </body>
 </html>
