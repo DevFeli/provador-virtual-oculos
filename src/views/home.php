@@ -41,6 +41,7 @@
                 </div>
 
                 <div id="canvas-container" style="display:none;">
+                    <div class="drag-glass"></div>
                     <canvas id="photo-canvas"></canvas>
 
                     <div class="controls-photo">
@@ -58,16 +59,16 @@
                         </div>
 
                         <div class="controls-glasses">
-                            <span class="material-symbols-outlined">
+                            <span class="material-symbols-outlined plus">
                                 add
                             </span>
-                            <span class="material-symbols-outlined">
+                            <span class="material-symbols-outlined minus">
                                 remove
                             </span>
-                            <span class="material-symbols-outlined">
+                            <span class="material-symbols-outlined rotate-left">
                                 rotate_left
                             </span>
-                            <span class="material-symbols-outlined">
+                            <span class="material-symbols-outlined rotate-rigth">
                                 rotate_right
                             </span>
                         </div>
@@ -77,9 +78,9 @@
             </section>
 
             <section class="glasses">
-                <!-- <?php foreach($getImages->getImages() as $image): ?>
-                    <img src="<?php echo $image; ?>" alt="Imagem de óculos" class="">
-                <?php endforeach; ?> -->
+                <?php foreach($getImages->getImages() as $image): ?>
+                    <img src="<?php echo $image; ?>" alt="Imagem de óculos" class="glass">
+                <?php endforeach; ?>
             </section>
 
         </div>
