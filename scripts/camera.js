@@ -6,6 +6,8 @@ export function camera(){
     const switchCameraButton = document.getElementById('switch-camera');
     const downloadButton = document.getElementById('download-button');
     const canvasContainer = document.getElementById('canvas-container');
+
+    const deleteButton = document.getElementById('delete');
     
     const cameraContainer = document.querySelector('.play-camera')
     const loader = document.querySelector('.spinn')
@@ -33,6 +35,7 @@ export function camera(){
             stream = await navigator.mediaDevices.getUserMedia(constraints);
             if(stream){
                 loader.style.display = 'none';
+                document.querySelector('.controls-camera').style.display = 'flex'
             }
             videoTracks = stream.getVideoTracks();
             videoElement.srcObject = stream;
@@ -67,6 +70,18 @@ export function camera(){
         link.download = 'photo.png';
         link.href = canvasElement.toDataURL();
         link.click();
+    });
+
+    // Função para excluir a imagem e retornar à visualização da câmera
+    deleteButton.addEventListener('click', () => {
+        // Esconde o canvas e volta a exibir o vídeo
+        canvasContainer.style.display = 'none';
+        videoElement.style.display = 'block';
+        cameraContainer.style.display = 'block'
+        
+        // Limpa o conteúdo do canvas
+        const context = canvasElement.getContext('2d');
+        context.clearRect(0, 0, canvasElement.width, canvasElement.height);
     });
 
     // Iniciar a câmera ao carregar a página

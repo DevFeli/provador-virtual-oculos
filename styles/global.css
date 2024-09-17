@@ -34,9 +34,9 @@ body{
     height: 50%;
 }
 
-#canvas-container{
-
-}
+/* #canvas-container{
+    display: none;
+} */
 
 #photo-canvas{
     width: 100%;
@@ -104,7 +104,11 @@ body{
     margin: 0px 5px 0px 5px;
 }
 
-/* -------------------------------------- glasses controls  ----------------------- */
+/* -------------------------------------- glasses  ----------------------- */
+.glasses{
+    background-color: aqua;
+    border: 1px solid red;
+}
 .controls-glasses{
     margin-right: 10px;
 }

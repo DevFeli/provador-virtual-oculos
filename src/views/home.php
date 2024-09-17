@@ -30,7 +30,7 @@
                     </div>
 
                     <video id="camera" autoplay playsinline></video>
-                    <div class="controls-camera">
+                    <div class="controls-camera" style="display:none;">
                         <div id="capture-button"></div>
                         <div id="switch-camera">
                         <span class="material-symbols-outlined">
@@ -40,13 +40,13 @@
                     </div>
                 </div>
 
-                <div id="canvas-container">
+                <div id="canvas-container" style="display:none;">
                     <canvas id="photo-canvas"></canvas>
-                    
+
                     <div class="controls-photo">
                         <div class="photo">
                             <div class="delete">
-                                <span class="material-symbols-outlined">
+                                <span id="delete" class="material-symbols-outlined">
                                     delete_forever
                                 </span>
                             </div>
