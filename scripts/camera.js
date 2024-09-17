@@ -6,8 +6,10 @@ export function camera(){
     const switchCameraButton = document.getElementById('switch-camera');
     const downloadButton = document.getElementById('download-button');
     const canvasContainer = document.getElementById('canvas-container');
-
+    
     const cameraContainer = document.querySelector('.play-camera')
+    const loader = document.querySelector('.spinn')
+    const capture = document.getElementById('capture');
 
     let stream;
     let currentCamera = 'user'; // Padrão: câmera frontal
@@ -29,6 +31,9 @@ export function camera(){
         try {
             // Solicita acesso à câmera
             stream = await navigator.mediaDevices.getUserMedia(constraints);
+            if(stream){
+                loader.style.display = 'none';
+            }
             videoTracks = stream.getVideoTracks();
             videoElement.srcObject = stream;
         } catch (error) {
