@@ -2,9 +2,8 @@
 
 class GetImages{
 
-    private array $extensions = ['jpg', 'jpeg', 'png', 'gif'];
-
-    private string $directory = './assets/oculos/';
+    public function __construct(private string $directory, private array $extensions){
+    }
 
     public function getImages(): array {
         $images = [];

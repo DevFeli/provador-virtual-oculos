@@ -5,6 +5,30 @@ body{
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
-    background-color: orange;
     font-family: "Montserrat", sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(199, 222, 241);
+    display: flex;
+    justify-content: center;
+    
+}
+
+.camera{
+    max-width: 500px;
+}
+
+#camera{
+    width: 100%;
+}
+
+#canvas-container{
+
+}
+
+#photo-canvas{
+    width: 100%;
 }

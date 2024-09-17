@@ -2,6 +2,10 @@
 
 require './src/models/GetImages.php';
 
-$getImages = new GetImages;
+$path = './assets/oculos/';
+
+$extensions = ['jpg', 'jpeg', 'png', 'gif'];
+
+$getImages = new GetImages($path, $extensions);
 
 require './src/views/home.php';
