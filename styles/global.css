@@ -89,7 +89,7 @@ body{
     justify-content: space-between;
     position: absolute;
     width: 400px;
-    margin-top: -35px;
+    margin-top: -48px;
     background-color: #2f30308a;
 }
 
@@ -187,4 +187,8 @@ body{
 /* -------------------------------------- presets  ----------------------- */
 .no-hover:hover{
     border: 1px solid transparent;
+}
+
+.btn-control{
+    padding: 10px;;
 }

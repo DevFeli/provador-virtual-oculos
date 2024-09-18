@@ -47,28 +47,28 @@
                     <div class="controls-photo">
                         <div class="photo">
                             <div class="delete">
-                                <span id="delete" class="material-symbols-outlined">
+                                <span id="delete" class="material-symbols-outlined btn-control">
                                     delete_forever
                                 </span>
                             </div>
                             <div id="download-button">
-                                <span class="material-symbols-outlined">
+                                <span class="material-symbols-outlined btn-control">
                                     download
                                 </span>
                             </div>
                         </div>
 
                         <div class="controls-glasses">
-                            <span class="material-symbols-outlined plus">
+                            <span class="material-symbols-outlined plus btn-control">
                                 add
                             </span>
-                            <span class="material-symbols-outlined minus">
+                            <span class="material-symbols-outlined minus btn-control">
                                 remove
                             </span>
-                            <span class="material-symbols-outlined rotate-left">
+                            <span class="material-symbols-outlined rotate-left btn-control">
                                 rotate_left
                             </span>
-                            <span class="material-symbols-outlined rotate-rigth">
+                            <span class="material-symbols-outlined rotate-rigth btn-control">
                                 rotate_right
                             </span>
                         </div>
