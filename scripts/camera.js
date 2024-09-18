@@ -65,11 +65,30 @@ export function camera(){
     });
 
     // Função para baixar a imagem capturada
-    downloadButton.addEventListener('click', () => {
+    downloadButton.addEventListener('click',async () => {
+
+        const context = canvasElement.getContext('2d');
+        const img = document.querySelector('.get')
+        const dimensions = img.getBoundingClientRect();
+        const canvasDimensions = canvasElement.getBoundingClientRect();
+        // const x = dimensions.left - canvasDimensions.left;
+        // const y = dimensions.top - canvasDimensions.top;
+        // const width = dimensions.width; 
+        // const height = dimensions.height;
+
+        const x = (dimensions.left - canvasDimensions.left) * (canvasElement.width / canvasDimensions.width);
+        const y = (dimensions.top - canvasDimensions.top) * (canvasElement.height / canvasDimensions.height);
+        const width = dimensions.width * (canvasElement.width / canvasDimensions.width);
+        const height = dimensions.height * (canvasElement.height / canvasDimensions.height);
+
+        context.drawImage(img, x, y, width, height);
+
         const link = document.createElement('a');
         link.download = 'photo.png';
         link.href = canvasElement.toDataURL();
         link.click();
+
+        deleteButton.click()
     });
 
     // Função para excluir a imagem e retornar à visualização da câmera

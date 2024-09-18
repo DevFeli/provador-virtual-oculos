@@ -42,7 +42,7 @@
 
                 <div id="canvas-container" style="display:none;">
                     <div class="drag-glass"></div>
-                    <canvas id="photo-canvas"></canvas>
+                    <canvas id="photo-canvas" width="400"></canvas>
 
                     <div class="controls-photo">
                         <div class="photo">
