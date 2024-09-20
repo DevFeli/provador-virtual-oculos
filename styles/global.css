@@ -155,8 +155,9 @@ body{
     width: 150px;
     position: absolute;
     top: 50px;
-    left: 125px;
+    left: 75px;
     display: none;
+    /* border: 1px solid orange; */
 }
 
 /* -------------------------------------- Loader  ----------------------- */
