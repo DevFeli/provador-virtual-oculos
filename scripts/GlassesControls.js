@@ -21,7 +21,7 @@ export function dragOnDrop(){
 
             cloneGlass = e.target.cloneNode(true);
 
-            cloneGlass.style.width = '250px';
+            // cloneGlass.style.width = '250px';
 
             cloneGlass.classList.add('no-hover');
             cloneGlass.classList.add('get');
